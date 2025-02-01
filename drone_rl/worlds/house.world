@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="default">
+  
+    <!-- Add the environment, lighting, etc. -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Add ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+        <uri>model://house</uri>
+        <pose>12 0 0 0 0 0</pose> <!-- Adjust pose as needed -->
+    </include>
+
+
+  </world>
+</sdf>
