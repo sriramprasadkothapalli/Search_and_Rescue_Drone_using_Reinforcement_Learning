@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="default">
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/demo</namespace>
+        <remapping>model_states:=model_states_demo</remapping>
+        <remapping>link_states:=link_states_demo</remapping>
+      </ros>
+      <update_rate>1.0</update_rate>
+    </plugin>
+    <!-- Add the environment, lighting, etc. -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Add ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+        <uri>model://house</uri>
+        <pose>0 0 0 0 0 0</pose> <!-- Adjust pose as needed -->
+    </include>
+
+
+  </world>
+</sdf>
